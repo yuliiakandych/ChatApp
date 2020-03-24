@@ -2,8 +2,22 @@
 $font:'Kanit', sans-serif;
 .login{
 	
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #C2E59C, #00BCD4);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 
-	background: linear-gradient( #C2E59C,  #00BCD4 );
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+	}
+
 
 	h1{
 		text-align: center;
@@ -15,12 +29,13 @@ $font:'Kanit', sans-serif;
 		text-align: center;
 		font-size: 3rem;
 	}
-	.login-img{
-		background-image: url('/images/bg.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
+}
+	// .login-img{
+	// 	background-image: url('/images/bg.svg');
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
 
-	}
+	// }
 
     //background-clip: initial;
 	background-position-x: center;
