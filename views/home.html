@@ -11,16 +11,20 @@
 <body>
 	<main id="app">
 		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			<label for="nickname">Your Awesome Nickname</label>
+			<input v-model='nickname' type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 
 			<form>
 				<label for="message">Something to say?</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input @click.prevent="dispatchMessage" type="submit">
 			</form>
-		</section>
+			<h1 id="connectionson">Users in chat: {{connected}}</h1>
+			
+		
 
+		</section>
+		
 		<section class="messages">
 			<ul id="messages">
 				<!-- render a new message component for every message -->

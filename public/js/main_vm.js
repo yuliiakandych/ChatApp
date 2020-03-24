@@ -3,10 +3,11 @@ import ChatMessage from "./modules/ChatMessage.js";
 
 const socket = io();
 //this is data destructuring. Go look it up on MDN
-function setUserId({sID}) {
+function setUserId({sID,connected}) {
     //debugger;
     console.log(sID);
     vm.socketID = sID;
+    vm.connected = connected;
 }
 
 function showDisconnectMessage(){
@@ -22,7 +23,8 @@ const vm = new Vue({
         socketID: "",
         message:"",
         nickname:"",
-        messages: []
+        messages: [],
+        connected:''
     },
 
     methods:{
@@ -32,7 +34,7 @@ const vm = new Vue({
 
             socket.emit('chat_message', {
                 content: this.message,
-                name: this.nickname || "anonymous"
+                name: this.nickname || 'anonymous'
             })
             this.message="";
         }
