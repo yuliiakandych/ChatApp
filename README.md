@@ -15,8 +15,8 @@ Hope you will enjoy this Awesome Chatt App! Have fun with colorful background an
 * In the Browser go:  localhost:3030
 
 ## Log In  
-Name: user1
-Password: 123  
+* Name: user1
+* Password: 123  
 
 ## Tools / Build with  
 * **HTML5**
